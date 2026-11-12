@@ -237,7 +237,6 @@
       function playExplosionSound(volume, distanceFactor) {
         if (!soundEnabled) return;
         if (!audioUnlocked || !audioCtx || !isAudioReady) return;
-        if (audioCtx.state !== "running") return;
 
         var now = audioCtx.currentTime;
 
@@ -469,6 +468,13 @@
       canvas.addEventListener('pointerdown', function (e) {
         handleInteraction(e);
       });
+
+      // iOS: pointerdown geçerli etkileşim sayılmaz; pointerup'ta context'i resume et
+      canvas.addEventListener('pointerup', function () {
+        if (audioCtx && audioCtx.state === "suspended") {
+          audioCtx.resume().catch(function () {});
+        }
+      }, { passive: true });
 
       function getMoon() {
         var shortSide = Math.min(W, H);
