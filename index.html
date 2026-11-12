@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="author" content="A. Emre Canaslan">
+  <title>FireWorks</title>
+  <link rel="icon" type="image/png" href="data:image/png;base64,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">
+  <meta name="description" content="FireWorks - A. Emre Canaslan">
+  <meta name="theme-color" content="#060818">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="FireWorks">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; overflow: hidden; background: #060818; }
+    canvas { display: block; width: 100%; height: 100%; touch-action: none; cursor: crosshair; }
+
+    /* ---- Ses kontrolü + imza ---- */
+    #soundControl {
+      position: fixed;
+      right: max(14px, env(safe-area-inset-right));
+      bottom: max(14px, env(safe-area-inset-bottom));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      z-index: 10;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+
+    #soundBtn {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.75);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      transition: background 0.15s ease, color 0.15s ease;
+      padding: 0;
+    }
+    #soundBtn:hover { background: rgba(255,255,255,0.12); }
+    #soundBtn:active { background: rgba(255,255,255,0.18); }
+    #soundBtn[aria-pressed="false"] { color: rgba(255,255,255,0.35); }
+
+    #signature {
+      font: 11px system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: rgba(255,255,255,0.38);
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="sky"></canvas>
+
+  <!-- Ses kontrolü + imza -->
+  <div id="soundControl">
+    <button id="soundBtn" type="button" aria-label="Sesi aç/kapat" aria-pressed="true">
+      <svg id="soundOnIcon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+        <path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4.03v8.05A4.5 4.5 0 0 0 16.5 12zM14 3.23v2.06a7 7 0 0 1 0 13.42v2.06a9 9 0 0 0 0-17.54z"/>
+      </svg>
+      <svg id="soundOffIcon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" style="display:none;">
+        <path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3z"/>
+        <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M16 9l5 6M21 9l-5 6"/>
+      </svg>
+    </button>
+    <div id="signature">A. Emre Canaslan</div>
+  </div>
+
+  <script>
+    (function () {
+      "use strict";
+
+      var canvas = document.getElementById("sky");
+      var ctx = canvas.getContext("2d");
+      var W = 0, H = 0, dpr = 1;
+
+      var SKY_TOP = "#05060f";
+      var SKY_BOTTOM = "#1a1430";
+
+      var SEA_RATIO = 0.15;
+      var SEA_TOP_COLOR = "#16203a";
+      var SEA_BOTTOM_COLOR = "#0a1024";
+
+      var TWO_PI = Math.PI * 2;
+
+      var stars = [];
+      var jellies = [];
+      var animFrame = 0;
+      var SEA_TOP = 0;
+      var SEA_BOTTOM = 0;
+
+      var pageVisible = true;
+      var rafId = null;
+
+      var audioUnlocked = false;
+      var soundEnabled = true;
+
+      var wakeLock = null;
+      var wakeLockRequested = false;
+      var randomExplosionTimer = null;
+
+      function resize() {
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        W = window.innerWidth;
+        H = window.innerHeight;
+        canvas.width = Math.round(W * dpr);
+        canvas.height = Math.round(H * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        SEA_BOTTOM = H;
+        SEA_TOP = Math.round(H * (1 - SEA_RATIO));
+        initStars();
+        initJellies();
+      }
+
+      function initStars() {
+        updateBlastBand();
+        stars = [];
+        var buffer = Math.max(18, Math.min(H * 0.06, SEA_TOP * 0.18));
+        var startY = SEA_TOP - buffer;
+        var endY = 6;
+        if (startY < endY + 20) startY = endY + 20;
+        var bandH = startY - endY;
+        var count = Math.round((W * bandH) / 850);
+        count = Math.max(350, Math.min(4000, count));
+        for (var i = 0; i < count; i++) {
+          var r = Math.random();
+          var radius, baseAlpha;
+          if (r < 0.75) {
+            radius = 0.25 + Math.random() * 0.2;
+            baseAlpha = 0.4;
+          } else if (r < 0.92) {
+            radius = 0.4 + Math.random() * 0.2;
+            baseAlpha = 0.7;
+          } else {
+            radius = 0.55 + Math.random() * 0.25;
+            baseAlpha = 1.0;
+          }
+          stars.push({
+            x: Math.random() * W,
+            y: endY + Math.random() * bandH,
+            phase: Math.random() * Math.PI * 2,
+            radius: radius,
+            baseAlpha: baseAlpha
+          });
+        }
+      }
+
+      var JELLY_DEF = [
+        { nx: 0.18, ny: 0.40, sizeMul: 0.90, hue: 210, phase: 0.0, drift: 0.9 },  // en sol: aşağı + sağa
+        { nx: 0.36, ny: 0.68, sizeMul: 1.15, hue: 285, phase: 1.7, drift: 1.1 },  // sol-orta alt (aynı)
+        { nx: 0.64, ny: 0.30, sizeMul: 1.00, hue: 195, phase: 3.3, drift: 0.8 },  // sağ-orta üst (aynı)
+        { nx: 0.80, ny: 0.45, sizeMul: 1.10, hue: 300, phase: 5.1, drift: 1.0 }   // en sağ: yukarı + sola
+      ];
+
+      function initJellies() {
+        jellies = [];
+        var short = Math.min(W, H);
+        var seaH = SEA_BOTTOM - SEA_TOP;
+        var baseSize = Math.min(short * 0.016, seaH * 0.24);
+        baseSize = Math.max(7, baseSize);
+        for (var i = 0; i < JELLY_DEF.length; i++) {
+          var d = JELLY_DEF[i];
+          jellies.push({
+            nx: d.nx,
+            ny: d.ny,
+            size: baseSize * d.sizeMul,
+            hue: d.hue,
+            phase: d.phase,
+            drift: d.drift
+          });
+        }
+      }
+
+      var audioCtx = null;
+      var isAudioReady = false;
+
+      function requestWakeLock() {
+        if (!('wakeLock' in navigator)) return;
+        if (wakeLock !== null) return;
+        if (document.hidden) return;
+
+        navigator.wakeLock.request('screen').then(function (lock) {
+          wakeLock = lock;
+          wakeLockRequested = true;
+          lock.addEventListener('release', function () {
+            wakeLock = null;
+          });
+        }).catch(function () {
+          wakeLock = null;
+        });
+      }
+
+      function releaseWakeLock() {
+        if (wakeLock !== null) {
+          wakeLock.release().catch(function () {});
+          wakeLock = null;
+        }
+      }
+
+      function unlockAudio() {
+        wakeLockRequested = true;
+        requestWakeLock();
+
+        if (!soundEnabled) return;
+
+        if (!audioCtx) {
+          var AC = window.AudioContext || window.webkitAudioContext;
+          if (!AC) return;
+          audioCtx = new AC();
+        }
+        if (audioCtx.state === "suspended") {
+          audioCtx.resume().then(function () {
+            audioUnlocked = true;
+            isAudioReady = true;
+          }).catch(function () {});
+        } else {
+          audioUnlocked = true;
+          isAudioReady = true;
+        }
+      }
+
+      function playExplosionSound(volume, distanceFactor) {
+        if (!soundEnabled) return;
+        if (!audioUnlocked || !audioCtx || !isAudioReady) return;
+        if (audioCtx.state !== "running") return;
+
+        var now = audioCtx.currentTime;
+
+        var subOsc = audioCtx.createOscillator();
+        var subGain = audioCtx.createGain();
+        subOsc.type = 'triangle';
+        subOsc.frequency.setValueAtTime(90, now);
+        subOsc.frequency.exponentialRampToValueAtTime(32, now + 0.45);
+        subGain.gain.setValueAtTime(0.0001, now);
+        subGain.gain.exponentialRampToValueAtTime(
+          volume * distanceFactor * 0.35,
+          now + 0.01
+        );
+        subGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.55);
+        subOsc.connect(subGain);
+        subGain.connect(audioCtx.destination);
+        subOsc.start(now);
+        subOsc.stop(now + 0.6);
+
+        var bufferSize = audioCtx.sampleRate * 0.9;
+        var buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+        var data = buffer.getChannelData(0);
+        var lastOut = 0;
+        for (var i = 0; i < bufferSize; i++) {
+          var white = Math.random() * 2 - 1;
+          data[i] = (lastOut + (0.02 * white)) / 1.02;
+          lastOut = data[i];
+          data[i] *= 3.0 * Math.exp(-i / (audioCtx.sampleRate * 0.22));
+        }
+
+        var noise = audioCtx.createBufferSource();
+        noise.buffer = buffer;
+
+        var lp = audioCtx.createBiquadFilter();
+        lp.type = 'lowpass';
+        lp.frequency.setValueAtTime(3500, now);
+        lp.frequency.exponentialRampToValueAtTime(600, now + 0.7);
+
+        var hp = audioCtx.createBiquadFilter();
+        hp.type = 'highpass';
+        hp.frequency.value = 120;
+
+        var noiseGain = audioCtx.createGain();
+        noiseGain.gain.setValueAtTime(0.0001, now);
+        noiseGain.gain.exponentialRampToValueAtTime(
+          volume * distanceFactor * 0.7,
+          now + 0.005
+        );
+        noiseGain.gain.exponentialRampToValueAtTime(0.001, now + 0.85);
+
+        noise.connect(hp);
+        hp.connect(lp);
+        lp.connect(noiseGain);
+        noiseGain.connect(audioCtx.destination);
+        noise.start(now);
+
+        var tailLen = Math.floor(audioCtx.sampleRate * 1.6);
+        var tailBuf = audioCtx.createBuffer(1, tailLen, audioCtx.sampleRate);
+        var tailData = tailBuf.getChannelData(0);
+        var tailLast = 0;
+        for (var t = 0; t < tailLen; t++) {
+          var tw = Math.random() * 2 - 1;
+          tailLast = (tailLast + 0.015 * tw) / 1.015;
+          tailData[t] = tailLast * Math.exp(-t / (audioCtx.sampleRate * 0.6));
+        }
+
+        var tailSrc = audioCtx.createBufferSource();
+        tailSrc.buffer = tailBuf;
+
+        var tailLp = audioCtx.createBiquadFilter();
+        tailLp.type = 'lowpass';
+        tailLp.frequency.value = 800;
+
+        var tailGain = audioCtx.createGain();
+        tailGain.gain.setValueAtTime(0.0001, now + 0.2);
+        tailGain.gain.exponentialRampToValueAtTime(
+          volume * distanceFactor * 0.06,
+          now + 0.25
+        );
+        tailGain.gain.exponentialRampToValueAtTime(0.0001, now + 1.8);
+
+        tailSrc.connect(tailLp);
+        tailLp.connect(tailGain);
+        tailGain.connect(audioCtx.destination);
+        tailSrc.start(now + 0.2);
+      }
+
+      function Particle(x, y, color, speed, angle, type) {
+        this.x = x;
+        this.y = y;
+        this.prevX = x;
+        this.prevY = y;
+        this.vx = Math.cos(angle) * speed;
+        this.vy = Math.sin(angle) * speed;
+        this.life = 1.0;
+        this.decay = type === 'ray' ? 0.008 : (0.012 + Math.random() * 0.01);
+        this.color = color;
+        this.size = Math.random() * 2 + 1;
+        this.type = type;
+        this.gravity = 0.05;
+        this.friction = 0.97;
+        this.flicker = Math.random() * Math.PI * 2;
+      }
+
+      Particle.prototype.update = function () {
+        this.prevX = this.x;
+        this.prevY = this.y;
+        this.x += this.vx;
+        this.y += this.vy;
+        this.vy += this.gravity;
+        this.vx *= this.friction;
+        this.vy *= this.friction;
+        this.life -= this.decay;
+        this.size *= 0.99;
+        if (this.life > 0) this.flicker += 0.3;
+      };
+
+      Particle.prototype.draw = function () {
+        var alpha = this.life;
+        if (this.life < 0.5) {
+          alpha = this.life * (0.5 + 0.5 * Math.sin(this.flicker));
+        }
+        ctx.globalAlpha = alpha;
+        if (this.type === 'ray') {
+          ctx.strokeStyle = this.color;
+          ctx.lineWidth = this.size;
+          ctx.beginPath();
+          ctx.moveTo(this.prevX, this.prevY);
+          ctx.lineTo(this.x, this.y);
+          ctx.stroke();
+        } else {
+          ctx.fillStyle = this.color;
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      };
+
+      var particles = [];
+      var colors = [
+        '#ff3333', '#33ff33', '#3333ff', '#ffff33',
+        '#ff33ff', '#33ffff', '#ffaa00', '#ffffff',
+        '#ff6600', '#ff0066', '#00ffcc'
+      ];
+
+      var BLAST_TOP = 0;
+      var BLAST_BOTTOM = 0;
+
+      function updateBlastBand() {
+        BLAST_TOP = H * 0.06;
+        BLAST_BOTTOM = SEA_TOP * 0.58;
+      }
+
+      function createExplosion(x, y, isClick) {
+        if (y > BLAST_BOTTOM) y = BLAST_BOTTOM;
+        if (y < BLAST_TOP) y = BLAST_TOP;
+
+        var count = isClick ? 150 : (100 + Math.floor(Math.random() * 100));
+        var baseSpeed = isClick ? 6 : (3.5 + Math.random() * 3.5);
+        var baseColor = colors[Math.floor(Math.random() * colors.length)];
+        var volume = isClick ? 1.0 : 0.8;
+        var dist = Math.max(0.4, 1 - (y / H));
+
+        for (var i = 0; i < count; i++) {
+          var angle = (Math.PI * 2 * i) / count + (Math.random() - 0.5) * 0.4;
+          var speed = baseSpeed * (0.5 + Math.random() * 0.8);
+          var pColor = baseColor;
+          if (Math.random() < 0.25) {
+            pColor = colors[Math.floor(Math.random() * colors.length)];
+          }
+          var type = Math.random() < 0.6 ? 'ray' : 'spark';
+          particles.push(new Particle(x, y, pColor, speed, angle, type));
+        }
+        playExplosionSound(volume, dist);
+      }
+
+      function scheduleRandomExplosion() {
+        if (!pageVisible) {
+          randomExplosionTimer = null;
+          return;
+        }
+        var delay = 400 + Math.random() * 1400;
+        randomExplosionTimer = setTimeout(function () {
+          randomExplosionTimer = null;
+          if (!pageVisible) return;
+          var burstCount = Math.random() < 0.4 ? 2 : 1;
+          for (var b = 0; b < burstCount; b++) {
+            var x = W * 0.1 + Math.random() * W * 0.8;
+            var y = BLAST_TOP + Math.random() * (BLAST_BOTTOM - BLAST_TOP);
+            (function (ex, ey) {
+              setTimeout(function () {
+                if (!pageVisible) return;
+                createExplosion(ex, ey, false);
+              }, b * 200);
+            })(x, y);
+          }
+          scheduleRandomExplosion();
+        }, delay);
+      }
+
+      function stopRandomExplosions() {
+        if (randomExplosionTimer !== null) {
+          clearTimeout(randomExplosionTimer);
+          randomExplosionTimer = null;
+        }
+      }
+
+      function handleInteraction(e) {
+        var x = e.clientX;
+        var y = e.clientY;
+
+        var wasUnlocked = audioUnlocked;
+        unlockAudio();
+
+        if (!wasUnlocked && audioCtx && audioCtx.state !== "running") {
+          var resumed = false;
+          var doBurst = function () {
+            if (resumed) return;
+            resumed = true;
+            createExplosion(x, y, true);
+          };
+          audioCtx.resume().then(doBurst).catch(doBurst);
+          setTimeout(doBurst, 150);
+        } else {
+          createExplosion(x, y, true);
+        }
+      }
+
+      canvas.addEventListener('pointerdown', function (e) {
+        handleInteraction(e);
+      });
+
+      function getMoon() {
+        var shortSide = Math.min(W, H);
+        var isPortrait = H > W;
+
+        var cRadius = shortSide * 0.045;
+        if (isPortrait) cRadius *= 1.1;
+        cRadius = Math.max(14, Math.min(cRadius, 40));
+
+        var cx = W * 0.5;
+        var cy = Math.max(cRadius + 12, H * 0.13);
+        return { x: cx, y: cy, r: cRadius };
+      }
+
+      function drawSky() {
+        var n = 1;
+        var moon = getMoon();
+
+        for (var i = 0; i < stars.length; i++) {
+          var st = stars[i];
+          var tw = 0.4 + 0.6 * Math.abs(Math.sin(animFrame * 0.04 + st.phase));
+          ctx.globalAlpha = n * st.baseAlpha * tw;
+          ctx.fillStyle = "#ffffff";
+          ctx.beginPath();
+          ctx.arc(st.x, st.y, st.radius, 0, TWO_PI);
+          ctx.fill();
+        }
+        ctx.globalAlpha = 1;
+
+        var cx = moon.x, cy = moon.y, cRadius = moon.r;
+        var glowR = cRadius * 2.8;
+        var h = ctx.createRadialGradient(cx, cy, cRadius * 0.57, cx, cy, glowR);
+        h.addColorStop(0, "rgba(200,210,255,0.35)");
+        h.addColorStop(1, "rgba(200,210,255,0)");
+        ctx.fillStyle = h;
+        ctx.fillRect(cx - glowR, cy - glowR, glowR * 2, glowR * 2);
+
+        var m = ctx.createRadialGradient(
+          cx - cRadius * 0.3, cy - cRadius * 0.3, cRadius * 0.15,
+          cx, cy, cRadius * 1.07
+        );
+        m.addColorStop(0, "#fbf8e8");
+        m.addColorStop(1, "#cfc9b0");
+        ctx.fillStyle = m;
+        ctx.beginPath();
+        ctx.arc(cx, cy, cRadius, 0, TWO_PI);
+        ctx.fill();
+
+        ctx.fillStyle = "rgba(150,145,120,0.45)";
+        var craters = [
+          [-0.31, -0.23, 0.23],
+          [0.31, 0.15, 0.18],
+          [-0.15, 0.46, 0.12],
+          [0.38, -0.46, 0.11]
+        ];
+        for (var c = 0; c < craters.length; c++) {
+          ctx.beginPath();
+          ctx.arc(
+            cx + craters[c][0] * cRadius,
+            cy + craters[c][1] * cRadius,
+            craters[c][2] * cRadius,
+            0, TWO_PI
+          );
+          ctx.fill();
+        }
+      }
+
+      function seaWave(x, time) {
+        return (
+          Math.sin(x * 0.012 + time * 0.8) * 5 +
+          Math.sin(x * 0.031 + time * 1.3) * 2.2 +
+          Math.sin(x * 0.055 + time * 0.5) * 1.2
+        );
+      }
+
+      function drawJelly(j) {
+        var time = animFrame * 0.02;
+        var seaH = SEA_BOTTOM - SEA_TOP;
+        var usable = seaH * 0.70;
+        var px = j.nx * W + Math.sin(time * 0.4 * j.drift + j.phase) * 6;
+        var py = SEA_TOP + seaH * 0.15 + j.ny * usable
+                 + Math.sin(time * 0.55 * j.drift + j.phase * 1.3) * (seaH * 0.04);
+        var r = j.size;
+        var pulse = 1 + Math.sin(animFrame * 0.06 + j.phase) * 0.15;
+        var hue = j.hue;
+
+        ctx.save();
+        ctx.translate(px, py);
+
+        var haloR = r * 4.0;
+        var halo = ctx.createRadialGradient(0, 0, r * 0.2, 0, 0, haloR);
+        halo.addColorStop(0, "hsla(" + hue + ", 90%, 70%, 0.55)");
+        halo.addColorStop(0.4, "hsla(" + hue + ", 90%, 65%, 0.22)");
+        halo.addColorStop(1, "hsla(" + hue + ", 90%, 65%, 0)");
+        ctx.fillStyle = halo;
+        ctx.beginPath();
+        ctx.arc(0, 0, haloR, 0, TWO_PI);
+        ctx.fill();
+
+        var tentacleScale = 0.85 + (pulse - 1) * 1.2;
+        ctx.lineCap = "round";
+        for (var t = -2; t <= 2; t++) {
+          for (var layer = 0; layer < 2; layer++) {
+            ctx.strokeStyle = layer === 0
+              ? "hsla(" + hue + ", 90%, 65%, 0.22)"
+              : "hsla(" + hue + ", 90%, 78%, 0.75)";
+            ctx.lineWidth = layer === 0 ? 3.0 : 1.2;
+            ctx.beginPath();
+            var tx = t * r * 0.32;
+            ctx.moveTo(tx, r * 0.15);
+            for (var s = 1; s <= 8; s++) {
+              var yy = r * 0.15 + s * r * 0.32 * tentacleScale;
+              var xx = tx + Math.sin(animFrame * 0.07 + s * 0.8 + t + j.phase) * r * 0.13;
+              ctx.lineTo(xx, yy);
+            }
+            ctx.stroke();
+          }
+        }
+
+        ctx.beginPath();
+        ctx.moveTo(-r, 0);
+        ctx.bezierCurveTo(-r, -r * 1.35 * pulse, r, -r * 1.35 * pulse, r, 0);
+        ctx.quadraticCurveTo(0, r * 0.4, -r, 0);
+        ctx.closePath();
+        var bell = ctx.createLinearGradient(0, -r * 1.2, 0, r * 0.4);
+        bell.addColorStop(0, "hsla(" + hue + ", 95%, 82%, 0.95)");
+        bell.addColorStop(0.5, "hsla(" + hue + ", 88%, 65%, 0.80)");
+        bell.addColorStop(1, "hsla(" + (hue + 15) + ", 85%, 45%, 0.60)");
+        ctx.fillStyle = bell;
+        ctx.fill();
+
+        var innerGlow = ctx.createRadialGradient(
+          -r * 0.3, -r * 0.5, r * 0.05,
+          -r * 0.3, -r * 0.5, r * 0.9
+        );
+        innerGlow.addColorStop(0, "hsla(" + hue + ", 100%, 95%, 0.55)");
+        innerGlow.addColorStop(1, "hsla(" + hue + ", 100%, 95%, 0)");
+        ctx.fillStyle = innerGlow;
+        ctx.beginPath();
+        ctx.moveTo(-r, 0);
+        ctx.bezierCurveTo(-r, -r * 1.35 * pulse, r, -r * 1.35 * pulse, r, 0);
+        ctx.quadraticCurveTo(0, r * 0.4, -r, 0);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.strokeStyle = "hsla(" + hue + ", 100%, 88%, 0.7)";
+        ctx.lineWidth = 1.1;
+        ctx.beginPath();
+        ctx.moveTo(-r * 0.9, 0);
+        ctx.quadraticCurveTo(0, r * 0.42, r * 0.9, 0);
+        ctx.stroke();
+
+        ctx.restore();
+      }
+
+      function drawSea() {
+        var time = animFrame * 0.02;
+        var seaH = SEA_BOTTOM - SEA_TOP;
+
+        var seaGrad = ctx.createLinearGradient(0, SEA_TOP - 8, 0, SEA_BOTTOM);
+        seaGrad.addColorStop(0, SEA_TOP_COLOR);
+        seaGrad.addColorStop(0.35, "#0f1830");
+        seaGrad.addColorStop(1, SEA_BOTTOM_COLOR);
+
+        ctx.fillStyle = seaGrad;
+        ctx.beginPath();
+        ctx.moveTo(0, SEA_BOTTOM);
+        for (var x = 0; x <= W + 8; x += 6) {
+          var wy = SEA_TOP + seaWave(x, time);
+          ctx.lineTo(x, wy);
+        }
+        ctx.lineTo(W + 8, SEA_BOTTOM);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.save();
+        ctx.beginPath();
+        ctx.rect(0, SEA_TOP - 10, W, SEA_BOTTOM - SEA_TOP + 10);
+        ctx.clip();
+
+        var prevComp = ctx.globalCompositeOperation;
+        ctx.globalCompositeOperation = "lighter";
+        for (var ji = 0; ji < jellies.length; ji++) drawJelly(jellies[ji]);
+        ctx.globalCompositeOperation = prevComp;
+
+        ctx.restore();
+
+        var waves = [
+          { dy: 4,  amp: 2.5, freq: 0.03,  speed: 0.04,  alpha: 0.55 },
+          { dy: 10, amp: 3.5, freq: 0.022, speed: -0.03, alpha: 0.38 },
+          { dy: 18, amp: 4.5, freq: 0.016, speed: 0.022, alpha: 0.25 }
+        ];
+        ctx.lineWidth = 2;
+        for (var wi = 0; wi < waves.length; wi++) {
+          var w = waves[wi];
+          ctx.strokeStyle = "rgba(255,255,255," + w.alpha + ")";
+          ctx.beginPath();
+          for (var wx = 0; wx <= W + 8; wx += 8) {
+            var wyy = SEA_TOP + w.dy +
+                      Math.sin(wx * w.freq + animFrame * w.speed + wi) * w.amp;
+            if (wx === 0) ctx.moveTo(wx, wyy);
+            else ctx.lineTo(wx, wyy);
+          }
+          ctx.stroke();
+        }
+      }
+
+      function drawScene() {
+        var sky = ctx.createLinearGradient(0, 0, 0, H);
+        sky.addColorStop(0, SKY_TOP);
+        sky.addColorStop(1, SKY_BOTTOM);
+        ctx.fillStyle = sky;
+        ctx.fillRect(0, 0, W, H);
+
+        drawSky();
+        drawSea();
+      }
+
+      function loop() {
+        if (!pageVisible) {
+          rafId = null;
+          return;
+        }
+        rafId = requestAnimationFrame(loop);
+        animFrame++;
+
+        drawScene();
+
+        ctx.globalCompositeOperation = 'lighter';
+        for (var j = particles.length - 1; j >= 0; j--) {
+          var p = particles[j];
+          p.update();
+          if (p.life <= 0) {
+            particles.splice(j, 1);
+          } else {
+            p.draw();
+          }
+        }
+        ctx.globalCompositeOperation = 'source-over';
+        ctx.globalAlpha = 1;
+      }
+
+      function startLoop() {
+        if (rafId === null) {
+          rafId = requestAnimationFrame(loop);
+        }
+      }
+
+      function init() {
+        resize();
+        updateBlastBand();
+        startLoop();
+      }
+
+      document.addEventListener("visibilitychange", function () {
+        pageVisible = !document.hidden;
+
+        if (pageVisible) {
+          startLoop();
+          if (soundEnabled && audioCtx && audioCtx.state === "suspended" && audioUnlocked) {
+            audioCtx.resume().catch(function () {});
+          }
+          if (audioUnlocked && randomExplosionTimer === null) {
+            scheduleRandomExplosion();
+          }
+          if (wakeLockRequested) requestWakeLock();
+        } else {
+          if (rafId !== null) {
+            cancelAnimationFrame(rafId);
+            rafId = null;
+          }
+          stopRandomExplosions();
+          if (audioCtx && audioCtx.state === "running") {
+            audioCtx.suspend().catch(function () {});
+          }
+          releaseWakeLock();
+        }
+      });
+
+      canvas.addEventListener('pointerdown', function firstTap() {
+        scheduleRandomExplosion();
+        canvas.removeEventListener('pointerdown', firstTap);
+      }, { once: true });
+
+      window.addEventListener("pagehide", function () {
+        stopRandomExplosions();
+        releaseWakeLock();
+      });
+
+      var lastW = 0, lastH = 0;
+      window.addEventListener("resize", function () {
+        var nw = window.innerWidth;
+        var nh = window.innerHeight;
+        if (Math.abs(nw - lastW) < 4 && Math.abs(nh - lastH) < 80) return;
+        lastW = nw;
+        lastH = nh;
+        resize();
+        updateBlastBand();
+      });
+      window.addEventListener("orientationchange", function () {
+        setTimeout(function () {
+          resize();
+          updateBlastBand();
+        }, 250);
+        setTimeout(function () {
+          resize();
+          updateBlastBand();
+        }, 600);
+      });
+
+      // ---- Ses kontrolü düğmesi ----
+      var soundBtn = document.getElementById("soundBtn");
+      var soundOnIcon = document.getElementById("soundOnIcon");
+      var soundOffIcon = document.getElementById("soundOffIcon");
+
+      function updateSoundButton() {
+        if (soundEnabled) {
+          soundOnIcon.style.display = "";
+          soundOffIcon.style.display = "none";
+          soundBtn.setAttribute("aria-pressed", "true");
+        } else {
+          soundOnIcon.style.display = "none";
+          soundOffIcon.style.display = "";
+          soundBtn.setAttribute("aria-pressed", "false");
+        }
+      }
+
+      soundBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        soundEnabled = !soundEnabled;
+        updateSoundButton();
+
+        if (!soundEnabled) {
+          if (audioCtx && audioCtx.state === "running") {
+            audioCtx.suspend().catch(function () {});
+          }
+        } else {
+          if (audioCtx && audioCtx.state === "suspended") {
+            audioCtx.resume().catch(function () {});
+          }
+        }
+      });
+
+      soundBtn.addEventListener("pointerdown", function (e) {
+        e.stopPropagation();
+      });
+
+      updateSoundButton();
+
+      init();
+    })();
+  </script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        var reloading = false;
+        navigator.serviceWorker.addEventListener("controllerchange", function () {
+          if (reloading || !window.__swHadController) return;
+          reloading = true;
+          location.reload();
+        });
+        window.__swHadController = !!navigator.serviceWorker.controller;
+        navigator.serviceWorker.register("sw.js").then(function (reg) {
+          reg.update();
+        }).catch(function () {});
+      });
+    }
+  </script>
+</body>
+</html>
